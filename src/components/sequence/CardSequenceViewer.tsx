@@ -1,5 +1,5 @@
-import { useMemo, useState, useEffect } from 'react'
-import { ChevronRight, ChevronDown, GitBranch } from 'lucide-react'
+import { useMemo, useState } from 'react'
+import { ChevronRight, GitBranch } from 'lucide-react'
 import type { UnifiedCardData } from '../../lib/catalog'
 import { getMultiSequenceGroup, type EvolutionLine } from '../../lib/sequence'
 import { SequenceThumbnail } from './SequenceThumbnail'
@@ -33,25 +33,12 @@ export function CardSequenceViewer({
   // Linha ativa selecionada no seletor (quando houver mais de 1 linha)
   const [selectedLineId, setSelectedLineId] = useState<string>('')
 
-  // Sempre sincroniza a linha ativa quando a carta ou as linhas mudarem
-  useEffect(() => {
-    if (!multiSequence || multiSequence.lines.length === 0) {
-      setSelectedLineId('')
-      return
-    }
-
-    // Se a linha atual ainda for válida, mantém; senão usa a primeira
-    setSelectedLineId((prev) => {
-      const stillExists = multiSequence.lines.some((l) => l.id === prev)
-      return stillExists ? prev : multiSequence.lines[0].id
-    })
-  }, [multiSequence])
-
   // Sem sequência válida (menos de 2 cartas na cadeia) -> não renderiza nada
   if (!multiSequence || multiSequence.lines.length === 0) {
     return null
   }
 
+  // Linha ativa resolvida de forma reativa: se a selecionada existir na lista atual, usa ela; senão a primeira
   const activeLine: EvolutionLine =
     multiSequence.lines.find((l) => l.id === selectedLineId) ?? multiSequence.lines[0]
 

@@ -1,4 +1,4 @@
-import type { CardData } from './card'
+import type { CardData } from '../types/card'
 
 export interface UnifiedCardData extends CardData {
   hasTexturizada: boolean
