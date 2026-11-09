@@ -1,0 +1,74 @@
+version: "1.0.0"
+workspace:
+  type: brownfield
+  structure: monolith
+  autonomy_bias: balanced
+  run_scope_preference: single
+
+intents:
+  - id: evolution-component-redesign
+    title: "Ajuste do Componente de Evolução ao Layout Stitch"
+    status: completed
+    created_at: "2026-11-09T09:35:00-03:00"
+    completed_at: "2026-11-09T09:51:30-03:00"
+    work_items:
+      - id: WI-01
+        file: work-items/WI-01-thumbnail-connectors.md
+        status: completed
+        mode: confirm
+      - id: WI-02
+        file: work-items/WI-02-bottom-dock-layout.md
+        status: completed
+        mode: confirm
+  - id: evolution-dock-refinement
+    title: "Refinamento de UI/UX do Dock de Evolução"
+    status: completed
+    created_at: "2026-11-09T09:58:00-03:00"
+    completed_at: "2026-11-09T10:00:10-03:00"
+    work_items:
+      - id: WI-03
+        file: work-items/WI-03-icon-and-subrow-selector.md
+        status: completed
+        mode: confirm
+      - id: WI-04
+        file: work-items/WI-04-thumbnails-sizing-refinement.md
+        status: completed
+        mode: confirm
+  - id: evolution-dock-zoom-and-padding-fix
+    title: "Refinamento de Posição, Zoom e Padding das Thumbnails"
+    status: completed
+    created_at: "2026-11-09T10:05:00-03:00"
+    completed_at: "2026-11-09T10:08:25-03:00"
+    work_items:
+      - id: WI-05
+        file: work-items/WI-05-touch-drag-overlap-removal.md
+        status: completed
+        mode: confirm
+      - id: WI-06
+        file: work-items/WI-06-zoom-limits-and-framing.md
+        status: completed
+        mode: confirm
+      - id: WI-07
+        file: work-items/WI-07-thumbnail-padding-fix.md
+        status: completed
+        mode: confirm
+
+runs:
+  active: []
+  history:
+    - id: run-01-wi-01
+      work_item: WI-01
+      status: completed
+      completed_at: "2026-11-09T09:38:35-03:00"
+    - id: run-02-wi-02
+      work_item: WI-02
+      status: completed
+      completed_at: "2026-11-09T09:51:30-03:00"
+    - id: run-03-wi-03-wi-04
+      work_item: WI-03,WI-04
+      status: completed
+      completed_at: "2026-11-09T10:00:10-03:00"
+    - id: run-04-wi-05-wi-06-wi-07
+      work_item: WI-05,WI-06,WI-07
+      status: completed
+      completed_at: "2026-11-09T10:08:25-03:00"

@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Tipografia */
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  /* Cores Base do Sistema & shadcn */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Tokens Cyber-Ethereal Específicos */
+  --color-surface-dim: var(--surface-dim);
+  --color-surface-bright: var(--surface-bright);
+  --color-surface-container: var(--surface-container);
+  --color-surface-high: var(--surface-high);
+  --color-ether-violet: #8b5cf6;
+  --color-ether-cyan: #06b6d4;
+  --color-ether-gold: #f59e0b;
+  --color-ether-crimson: #f43f5e;
+  --color-ether-emerald: #10b981;
+
+  /* Raios de Arredondamento */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-card: 1rem;
+  --radius-xl: 1.5rem;
+}
+
+/* ========================================================
+   Tema Base: Cyber-Ethereal Dark Mode (Padrão)
+   ======================================================== */
+:root {
+  --background: #0a0b10;
+  --foreground: #f8fafc;
+  --card: rgba(18, 20, 30, 0.75);
+  --card-foreground: #f8fafc;
+  --popover: #1e1f25;
+  --popover-foreground: #e3e1e9;
+  --primary: #8b5cf6;
+  --primary-foreground: #ffffff;
+  --secondary: #06b6d4;
+  --secondary-foreground: #003640;
+  --muted: #1e2235;
+  --muted-foreground: #94a3b8;
+  --accent: rgba(139, 92, 246, 0.15);
+  --accent-foreground: #d0bcff;
+  --destructive: #f43f5e;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: #1f2333;
+  --ring: #8b5cf6;
+
+  --surface-dim: #0d0e13;
+  --surface-bright: #38393f;
+  --surface-container: #1e1f25;
+  --surface-high: #292a2f;
+}
+
+/* ========================================================
+   Tema Opcional: Light Mode (Invertido)
+   ======================================================== */
+.light {
+  --background: #f5f4f8;
+  --foreground: #121318;
+  --card: rgba(255, 255, 255, 0.85);
+  --card-foreground: #121318;
+  --popover: #ffffff;
+  --popover-foreground: #121318;
+  --primary: #6d3bd7;
+  --primary-foreground: #ffffff;
+  --secondary: #0284c7;
+  --secondary-foreground: #ffffff;
+  --muted: #eceaf1;
+  --muted-foreground: #6b6375;
+  --accent: rgba(109, 59, 215, 0.1);
+  --accent-foreground: #6d3bd7;
+  --destructive: #e11d48;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.12);
+  --input: #d8d5df;
+  --ring: #6d3bd7;
+
+  --surface-dim: #e4e2eb;
+  --surface-bright: #ffffff;
+  --surface-container: #ffffff;
+  --surface-high: #eceaf1;
+}
+
+/* Base Styles */
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-body);
+    min-height: 100vh;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
