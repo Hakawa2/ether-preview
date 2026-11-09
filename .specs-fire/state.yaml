@@ -11,86 +11,39 @@ intents:
     status: completed
     created_at: "2026-11-09T09:35:00-03:00"
     completed_at: "2026-11-09T09:51:30-03:00"
-    work_items:
-      - id: WI-01
-        file: work-items/WI-01-thumbnail-connectors.md
-        status: completed
-        mode: confirm
-      - id: WI-02
-        file: work-items/WI-02-bottom-dock-layout.md
-        status: completed
-        mode: confirm
   - id: evolution-dock-refinement
     title: "Refinamento de UI/UX do Dock de Evolução"
     status: completed
     created_at: "2026-11-09T09:58:00-03:00"
     completed_at: "2026-11-09T10:00:10-03:00"
-    work_items:
-      - id: WI-03
-        file: work-items/WI-03-icon-and-subrow-selector.md
-        status: completed
-        mode: confirm
-      - id: WI-04
-        file: work-items/WI-04-thumbnails-sizing-refinement.md
-        status: completed
-        mode: confirm
   - id: evolution-dock-zoom-and-padding-fix
     title: "Refinamento de Posição, Zoom e Padding das Thumbnails"
     status: completed
     created_at: "2026-11-09T10:05:00-03:00"
     completed_at: "2026-11-09T10:08:25-03:00"
-    work_items:
-      - id: WI-05
-        file: work-items/WI-05-touch-drag-overlap-removal.md
-        status: completed
-        mode: confirm
-      - id: WI-06
-        file: work-items/WI-06-zoom-limits-and-framing.md
-        status: completed
-        mode: confirm
-      - id: WI-07
-        file: work-items/WI-07-thumbnail-padding-fix.md
-        status: completed
-        mode: confirm
   - id: typescript-build-and-lint-fix
     title: "Correção Definitiva de Erros de Build e Tipagem (tsc -b)"
     status: completed
     created_at: "2026-11-09T10:52:00-03:00"
     completed_at: "2026-11-09T10:55:40-03:00"
+  - id: download-and-localize-images
+    title: "Download e Localização de Imagens do Card Dataset"
+    status: in_progress
+    created_at: "2026-11-09T11:26:00-03:00"
     work_items:
-      - id: WI-08
-        file: work-items/WI-08-fix-carddata-import.md
-        status: completed
+      - id: WI-12
+        file: work-items/WI-12-download-script.md
+        status: pending
         mode: autopilot
-      - id: WI-09
-        file: work-items/WI-09-remove-unused-imports.md
-        status: completed
+      - id: WI-13
+        file: work-items/WI-13-localize-paths-script.md
+        status: pending
         mode: autopilot
-      - id: WI-10
-        file: work-items/WI-10-verify-build-and-lint.md
-        status: completed
-        mode: autopilot
+      - id: WI-14
+        file: work-items/WI-14-validate-local-assets.md
+        status: pending
+        mode: confirm
 
 runs:
   active: []
-  history:
-    - id: run-01-wi-01
-      work_item: WI-01
-      status: completed
-      completed_at: "2026-11-09T09:38:35-03:00"
-    - id: run-02-wi-02
-      work_item: WI-02
-      status: completed
-      completed_at: "2026-11-09T09:51:30-03:00"
-    - id: run-03-wi-03-wi-04
-      work_item: WI-03,WI-04
-      status: completed
-      completed_at: "2026-11-09T10:00:10-03:00"
-    - id: run-04-wi-05-wi-06-wi-07
-      work_item: WI-05,WI-06,WI-07
-      status: completed
-      completed_at: "2026-11-09T10:08:25-03:00"
-    - id: run-05-wi-08-wi-09-wi-10
-      work_item: WI-08,WI-09,WI-10
-      status: completed
-      completed_at: "2026-11-09T10:55:40-03:00"
+  history: []

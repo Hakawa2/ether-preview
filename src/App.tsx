@@ -74,7 +74,7 @@ export const App = () => {
       <BrandHeader />
 
       {/* 2. Top Tactical Section (Card Selector com Busca, Tags & Action Bar) */}
-      <section className="relative z-30 pt-16 px-4 sm:px-6 w-full max-w-lg mx-auto pointer-events-auto">
+      <section className="relative z-30 pt-20 px-4 sm:px-6 w-full max-w-lg mx-auto pointer-events-auto">
         <InspectorToolbar
           cards={UNIFIED_CARDS}
           selectedCard={selectedCard}
@@ -92,7 +92,7 @@ export const App = () => {
       </section>
 
       {/* 3. 3D Viewport com Canvas R3F — área central totalmente livre para o card */}
-      <div className="absolute inset-0 z-10 w-full h-full pt-16 pb-40">
+      <div className="absolute inset-0 z-10 w-full h-full pt-20 pb-40">
         <Canvas
           camera={{ position: [0, 0.45, 6.2], fov: 45 }}
           gl={{
@@ -124,3 +124,4 @@ export const App = () => {
     </main>
   )
 }
+

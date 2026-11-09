@@ -21,9 +21,6 @@ export function BrandHeader({ onNotificationClick }: BrandHeaderProps) {
               <span className="font-display text-[10px] sm:text-xs font-bold tracking-widest uppercase text-secondary truncate">
                 Éther TCG
               </span>
-              <span className="px-1.5 py-0.2 rounded text-[9px] font-display font-semibold uppercase tracking-wider bg-amber-500/15 text-amber-400 border border-amber-500/30">
-                Beta
-              </span>
               <span className="px-1.5 py-0.2 rounded text-[9px] font-display font-medium uppercase tracking-wider bg-surface-container text-muted-foreground border border-border/50 hidden xs:inline">
                 Não Oficial
               </span>
@@ -42,16 +39,7 @@ export function BrandHeader({ onNotificationClick }: BrandHeaderProps) {
 
         {/* Disclaimer compacto para mobile/tablet e Controles */}
         <div className="flex items-center gap-2 flex-shrink-0">
-          {/* Badge explicativa em tooltip para telas menores */}
-          <div
-            title="Projeto de fã em fase beta (não oficial). Desenvolvido exclusivamente para fins educacionais e estudo de boas práticas de engenharia com IA."
-            className="flex items-center gap-1 px-2 py-1 rounded-md bg-surface-container/60 border border-border/60 text-muted-foreground hover:text-foreground transition-colors cursor-help md:hidden"
-          >
-            <Info className="w-3.5 h-3.5 text-secondary flex-shrink-0" />
-            <span className="font-display text-[10px] font-medium tracking-wide">
-              Estudo IA
-            </span>
-          </div>
+
 
           <ThemeToggle />
 
@@ -66,6 +54,13 @@ export function BrandHeader({ onNotificationClick }: BrandHeaderProps) {
             <span className="absolute top-2 right-2 w-2 h-2 rounded-full bg-secondary ring-2 ring-surface animate-pulse" />
           </button>
         </div>
+      </div>
+      {/* Disclaimer Banner — linha dedicada, legível no mobile */}
+      <div className="w-full px-4 sm:px-6 py-1 bg-surface-container-low/70 backdrop-blur-sm border-t border-border/30 flex items-center justify-center gap-1.5">
+        <Info className="w-3 h-3 text-amber-400 flex-shrink-0" />
+        <p className="font-body text-[10px] sm:text-[11px] text-muted-foreground text-center leading-tight">
+          Projeto de fã <span className="text-amber-400 font-medium">não oficial</span> · Versão Beta · Estudo de Boas Práticas de IA 🤖
+        </p>
       </div>
     </header>
   )
